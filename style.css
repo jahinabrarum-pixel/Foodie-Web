@@ -127,6 +127,10 @@ li{
 
 /* Section Styling */
 
+.hero-section{
+    min-height: calc(100vh - 14vh);
+}
+
 /* Footer Styling */
 
 /* Media Queries */
