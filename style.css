@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
     -webkit-tap-highlight-color: transparent;
-    /* border: .1rem solid red; */
 }
 
 :root{
@@ -22,7 +21,6 @@ body{
 }
 
 /* Basic Styling */
-
 a{
     font-size: 1.1rem;
     text-decoration: none;
@@ -72,12 +70,7 @@ img{
     text-align: center;
 }
 
-
-
-
-
 /* Header Styling */
-
 .navbar{
     min-height: 14vh;
 }
@@ -146,7 +139,6 @@ img{
 }
 
 /* Section Styling */
-
 .hero-section{
     min-height: calc(100vh - 14vh);
 }
@@ -195,12 +187,11 @@ p{
     color: var(--pure-white);
 }
 
-
-
 /* Footer Styling */
 
-/* Media Queries */
-
+/* =======================================
+   Mobile Responsive Media Query (Single Block)
+   ======================================= */
 @media screen and (max-width: 780px){
     .navlist,
     .desktop-action .btn{
@@ -218,26 +209,26 @@ p{
         align-items: center;
         gap: 2rem;
         position: absolute;
-        top: 14vh; /* মেনু যেন একদম হেডার এর নিচ থেকে শুরু হয় */
+        top: 14vh; 
         left: 50%;
-        transform: translateX(-50%) translateY(-150%); /* শুরুতে স্ক্রিনের উপরে লুকিয়ে থাকবে */
-        width: 90%; /* মোবাইলে সুন্দর ফিট হওয়ার জন্য */
+        transform: translateX(-50%) translateY(-150%); 
+        width: 90%; 
         max-width: 20rem;
         padding: 2rem;
         background: var(--pure-white);
         border: .1rem solid var(--gold-finger);
         border-radius: 2rem;
         box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
-        rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+                    rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
         transition: all .5s ease-in-out;
-        z-index: 100; /* মেনু যেন সবার উপরে থাকে */
+        z-index: 100; 
     }
 
     .mobile-menu-active{
-        transform: translateX(-50%) translateY(0); /* ক্লিক করলে নেমে আসবে */
+        transform: translateX(-50%) translateY(0); 
     }
 
-    /* section */
+    /* Hero Section Mobile Fixes */
     h1{
         font-size: 3.6rem;
     }
@@ -252,5 +243,47 @@ p{
 
     .gap-4{
         gap: 4rem;
+    }
+
+    /* বাটন উপরে এবং সোশ্যাল গ্রুপ নিচে নেওয়ার জন্য */
+    .hero-actions {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-start;
+        gap: 1.5rem; 
+    }
+
+
+    /* মোবাইলের জন্য আইকনের সাইজ */
+    .socail-icon {
+        width: 2.8rem;
+        aspect-ratio: 1;
+        line-height: 2.8rem;
+        font-size: 1.1rem;
+    }
+
+    .social-container {
+        display: flex !important;
+        flex-direction: row !important; /* একদম পাশাপাশি রাখার জন্য */
+        flex-wrap: nowrap !important;   /* কোনো কিছু নিচে নামবে না */
+        gap: 0.5rem !important;        /* মোবাইলে উপাদানগুলোর মাঝের গ্যাপ কমানো হলো */
+        width: 100%;
+        overflow-x: auto;              /* খুব ছোট স্ক্রিন হলে যেন ভেঙে নিচে না গিয়ে ডানে স্ক্রল করা যায় */
+    }
+
+    /* মোবাইলে Order Now বাটনের সাইজ কিছুটা ছোট করা হলো */
+    .social-container .btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+        white-space: nowrap; /* লেখা যেন দুই লাইনে না ভেঙে যায় */
+    }
+
+    /* মোবাইলে সোশ্যাল আইকনগুলোর সাইজ ছোট করা হলো যেন এক লাইনে ধরে */
+    .social-container .socail-icon {
+        width: 2.5rem;
+        aspect-ratio: 1;
+        line-height: 2.5rem;
+        font-size: 1rem;
+        flex-shrink: 0; /* আইকনগুলো যেন চ্যাপ্টা না হয়ে যায় */
     }
 }
