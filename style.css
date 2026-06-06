@@ -5,8 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
-    /* মোবাইলের নীল ক্লিক ইফেক্ট বন্ধ করার জন্য */
     -webkit-tap-highlight-color: transparent;
+    /* border: .1rem solid red; */
 }
 
 :root{
@@ -32,6 +32,7 @@ a{
 .flex{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 li{
@@ -60,7 +61,7 @@ img{
     max-width: 100%;
     height: auto;
     margin: auto;
-    /* display: block; */
+    display: block;
 }
 
 /* Header Styling */
@@ -138,6 +139,52 @@ img{
     min-height: calc(100vh - 14vh);
 }
 
+.content,
+.image-container{
+    flex: 1;
+    flex-basis: 300px;
+} 
+
+h1{
+    font-size: 5.6vw;
+    color: var(--lead);
+}
+
+h1 span{
+    color: var(--gold-finger);
+}
+
+p{
+    font-size: 1.25rem;
+    color: gray;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+.para{
+    margin-block: 2rem;
+    max-width: 550px;
+}
+
+.socail-icon{
+    background: var(--hint-yellow);
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
+    transition: .3s ease-in-out;
+}
+
+.socail-icon:hover{
+    background: var(--lead);
+    color: var(--pure-white);
+}
+
+
+
 /* Footer Styling */
 
 /* Media Queries */
@@ -176,5 +223,18 @@ img{
 
     .mobile-menu-active{
         transform: translateX(-50%) translateY(0); /* ক্লিক করলে নেমে আসবে */
+    }
+
+    /* section */
+    h1{
+        font-size: 3.6rem;
+    }
+
+    .content{
+        padding-top: 3rem;
+    }
+
+    .gap-2{
+        gap: 1.4rem;
     }
 }
