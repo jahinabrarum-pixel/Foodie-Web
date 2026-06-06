@@ -1,289 +1,329 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto Condensed", sans-serif;
-    -webkit-tap-highlight-color: transparent;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
-:root{
-    --lead: #212121;
-    --gold-finger: #F2BD12;
-    --eye-ball: #FFFDF7;
-    --hint-yellow: #FCF1CC;
-    --pure-white: #FFF;
+:root {
+  --lead: #212121;
+  --gold-finger: #f2bd12;
+  --eye-ball: #fffdf7;
+  --hint-yellow: #fcf1cc;
+  --pure-white: #fff;
 }
 
-body{
-    background: var(--eye-ball);
+body {
+  background: var(--eye-ball);
 }
 
 /* Basic Styling */
-a{
-    font-size: 1.1rem;
-    text-decoration: none;
-    color: var(--lead);
+a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--lead);
 }
 
-.flex{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
-.between{
-    justify-content: space-between;
+.between {
+  justify-content: space-between;
 }
 
-.gap-2{
-    gap: 2rem;
+.gap-2 {
+  gap: 2rem;
 }
 
-.gap-3{
-    gap: 3rem;
+.gap-3 {
+  gap: 3rem;
 }
 
-.wrapper{
-    max-width: 1400px;
-    margin: auto;
-    padding: 1.5rem;
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
+  padding: 1.5rem;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-    display: block;
+img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
 }
 
-.p-top{
-    padding-top: 10rem;
+.p-top {
+  padding-top: 10rem;
 }
 
-.t-center{
-    text-align: center;
+.t-center {
+  text-align: center;
 }
+
+.mt-4{
+  margin-top: 4rem;
+}
+
 
 /* Header Styling */
-.navbar{
-    min-height: 14vh;
+.navbar {
+  min-height: 14vh;
 }
 
-.logo{
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--gold-finger);
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gold-finger);
 }
 
-.btn{
-    display: inline-block;
-    padding: .9rem 2rem;
-    background: var(--gold-finger);
-    border-radius: 1rem;
-    font-size: 1.1rem;
-    color: var(--pure-white);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
-    transition: .3s ease-in-out;
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: var(--gold-finger);
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  color: var(--pure-white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
+  transition: 0.3s ease-in-out;
 }
 
-.btn:hover{
-    background: var(--lead);
+.btn:hover {
+  background: var(--lead);
 }
 
-.cart-icon{
-    color: var(--lead);
-    font-size: 1.3rem;
-    position: relative;
+.cart-icon {
+  color: var(--lead);
+  font-size: 1.3rem;
+  position: relative;
 }
 
-.cart-icon .cart-vaelu{
-    position: absolute;
-    top: 50%;
-    right: -10px;
-    font-size: .85rem;
-    width: 20px;
-    aspect-ratio: 1;
-    border-radius: 100vw;
-    background: var(--gold-finger);
-    color: var(--lead);
-    text-align: center;
-    line-height: 20px;
+.cart-icon .cart-vaelu {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  font-size: 0.85rem;
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+  background: var(--gold-finger);
+  color: var(--lead);
+  text-align: center;
+  line-height: 20px;
 }
 
-.desktop-action .hamburger{
-    font-size: 1.5rem;
-    display: none;
+.desktop-action .hamburger {
+  font-size: 1.5rem;
+  display: none;
 }
 
-.mobile-menu{
-    display: none;
+.mobile-menu {
+  display: none;
 }
 
 /* Hamburger Icon Toggle Styling */
 .hamburger .close-icon {
-    display: none;
+  display: none;
 }
 
 .hamburger.active .bar-icon {
-    display: none;
+  display: none;
 }
 
 .hamburger.active .close-icon {
-    display: block;
+  display: block;
 }
 
 /* Section Styling */
-.hero-section{
-    min-height: calc(100vh - 14vh);
+
+.hero-section {
+  min-height: calc(100vh - 14vh);
 }
 
 .content,
-.image-container{
-    flex: 1;
-    flex-basis: 300px;
-} 
-
-h1{
-    font-size: 5.6vw;
-    color: var(--lead);
+.image-container,
+.service-card{
+  flex: 1;
+  flex-basis: 300px;
 }
 
-h1 span{
-    color: var(--gold-finger);
+h1 {
+  font-size: 5.6vw;
+  color: var(--lead);
 }
 
-p{
-    font-size: 1.25rem;
-    color: gray;
-    line-height: 1.8rem;
-    font-weight: 400;
+h1 span {
+  color: var(--gold-finger);
 }
 
-.para{
-    margin-block: 2rem;
-    max-width: 550px;
+p {
+  font-size: 1.25rem;
+  color: gray;
+  line-height: 1.8rem;
+  font-weight: 400;
 }
 
-.socail-icon{
-    background: var(--hint-yellow);
-    width: 3rem;
-    aspect-ratio: 1;
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 3rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
-    transition: .3s ease-in-out;
+.para {
+  margin-block: 2rem;
+  max-width: 550px;
 }
 
-.socail-icon:hover{
-    background: var(--lead);
-    color: var(--pure-white);
+.socail-icon {
+  background: var(--hint-yellow);
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.socail-icon:hover {
+  background: var(--lead);
+  color: var(--pure-white);
+}
+
+/* SECTION 01 */
+h5{
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
+  color: var(--gold-finger);
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: 3.7rem;
+  text-transform: capitalize;
+  color: var(--lead);
+}
+
+h3{
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--lead);
+}
+
+.service-card h3{
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Footer Styling */
 
-/* =======================================
-   Mobile Responsive Media Query (Single Block)
-   ======================================= */
-@media screen and (max-width: 780px){
-    .navlist,
-    .desktop-action .btn{
-        display: none;
-    }
+/* =============================
+   Mobile Responsive Media Query 
+   ============================= */
+@media screen and (max-width: 780px) {
+  .navlist,
+  .desktop-action .btn {
+    display: none;
+  }
 
-    .desktop-action .hamburger{
-        display: block;
-    }
+  .desktop-action .hamburger {
+    display: block;
+  }
 
-    .mobile-menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        position: absolute;
-        top: 14vh; 
-        left: 50%;
-        transform: translateX(-50%) translateY(-150%); 
-        width: 90%; 
-        max-width: 20rem;
-        padding: 2rem;
-        background: var(--pure-white);
-        border: .1rem solid var(--gold-finger);
-        border-radius: 2rem;
-        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
-                    rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
-        transition: all .5s ease-in-out;
-        z-index: 100; 
-    }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    top: 14vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%);
+    width: 90%;
+    max-width: 20rem;
+    padding: 2rem;
+    background: var(--pure-white);
+    border: 0.1rem solid var(--gold-finger);
+    border-radius: 2rem;
+    box-shadow:
+      rgba(0, 0, 0, 0.05) 8px 8px 8px,
+      rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+  }
 
-    .mobile-menu-active{
-        transform: translateX(-50%) translateY(0); 
-    }
+  .mobile-menu-active {
+    transform: translateX(-50%) translateY(0);
+  }
 
-    /* Hero Section Mobile Fixes */
-    h1{
-        font-size: 3.6rem;
-    }
+  /* Hero Section Mobile Fixes */
 
-    .content{
-        padding-top: 3rem;
-    }
+  /* HERO SECTION */
 
-    .gap-2{
-        gap: 1rem;
-    }
+  h1 {
+    font-size: 3.6rem;
+  }
 
-    .gap-4{
-        gap: 4rem;
-    }
+  .content {
+    padding-top: 3rem;
+  }
 
-    /* বাটন উপরে এবং সোশ্যাল গ্রুপ নিচে নেওয়ার জন্য */
-    .hero-actions {
-        display: flex;
-        /* flex-direction: column; */
-        align-items: flex-start;
-        gap: 1.5rem; 
-    }
+  .gap-2 {
+    gap: 1rem;
+  }
 
+  .gap-4 {
+    gap: 4rem;
+  }
 
-    /* মোবাইলের জন্য আইকনের সাইজ */
-    .socail-icon {
-        width: 2.8rem;
-        aspect-ratio: 1;
-        line-height: 2.8rem;
-        font-size: 1.1rem;
-    }
+  /* বাটন উপরে এবং সোশ্যাল গ্রুপ নিচে নেওয়ার জন্য */
+  .hero-actions {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
 
-    .social-container {
-        display: flex !important;
-        flex-direction: row !important; /* একদম পাশাপাশি রাখার জন্য */
-        flex-wrap: nowrap !important;   /* কোনো কিছু নিচে নামবে না */
-        gap: 0.5rem !important;        /* মোবাইলে উপাদানগুলোর মাঝের গ্যাপ কমানো হলো */
-        width: 100%;
-        overflow-x: auto;              /* খুব ছোট স্ক্রিন হলে যেন ভেঙে নিচে না গিয়ে ডানে স্ক্রল করা যায় */
-    }
+  /* মোবাইলের জন্য আইকনের সাইজ */
+  .socail-icon {
+    width: 2.8rem;
+    aspect-ratio: 1;
+    line-height: 2.8rem;
+    font-size: 1.1rem;
+  }
 
-    /* মোবাইলে Order Now বাটনের সাইজ কিছুটা ছোট করা হলো */
-    .social-container .btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.95rem;
-        white-space: nowrap; /* লেখা যেন দুই লাইনে না ভেঙে যায় */
-    }
+  .social-container {
+    display: flex !important;
+    flex-direction: row !important; /* একদম পাশাপাশি রাখার জন্য */
+    flex-wrap: nowrap !important; /* কোনো কিছু নিচে নামবে না */
+    gap: 0.5rem !important; /* মোবাইলে উপাদানগুলোর মাঝের গ্যাপ কমানো হলো */
+    width: 100%;
+    overflow-x: auto; /* খুব ছোট স্ক্রিন হলে যেন ভেঙে নিচে না গিয়ে ডানে স্ক্রল করা যায় */
+  }
 
-    /* মোবাইলে সোশ্যাল আইকনগুলোর সাইজ ছোট করা হলো যেন এক লাইনে ধরে */
-    .social-container .socail-icon {
-        width: 2.5rem;
-        aspect-ratio: 1;
-        line-height: 2.5rem;
-        font-size: 1rem;
-        flex-shrink: 0; /* আইকনগুলো যেন চ্যাপ্টা না হয়ে যায় */
-    }
+  /* মোবাইলে Order Now বাটনের সাইজ কিছুটা ছোট করা হলো */
+  .social-container .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+    white-space: nowrap; /* লেখা যেন দুই লাইনে না ভেঙে যায় */
+  }
+
+  /* মোবাইলে সোশ্যাল আইকনগুলোর সাইজ ছোট করা হলো যেন এক লাইনে ধরে */
+  .social-container .socail-icon {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    flex-shrink: 0; /* আইকনগুলো যেন চ্যাপ্টা না হয়ে যায় */
+  }
+
+  /* SECTION 01 */
+  h2{
+    font-size: 3rem;
+  }
 }
