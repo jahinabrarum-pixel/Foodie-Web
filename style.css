@@ -64,6 +64,18 @@ img{
     display: block;
 }
 
+.p-top{
+    padding-top: 10rem;
+}
+
+.t-center{
+    text-align: center;
+}
+
+
+
+
+
 /* Header Styling */
 
 .navbar{
@@ -235,6 +247,10 @@ p{
     }
 
     .gap-2{
-        gap: 1.4rem;
+        gap: 1rem;
+    }
+
+    .gap-4{
+        gap: 4rem;
     }
 }
