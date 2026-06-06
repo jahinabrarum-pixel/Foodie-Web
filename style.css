@@ -70,10 +70,9 @@ img {
   text-align: center;
 }
 
-.mt-4{
+.mt-4 {
   margin-top: 4rem;
 }
-
 
 /* Header Styling */
 .navbar {
@@ -151,7 +150,7 @@ img {
 
 .content,
 .image-container,
-.service-card{
+.service-card {
   flex: 1;
   flex-basis: 300px;
   /* cursor: pointer; */
@@ -196,32 +195,46 @@ p {
 }
 
 /* SECTION 01 */
-h5{
+h5 {
   font-size: 1.2rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   color: var(--gold-finger);
   text-transform: uppercase;
 }
 
-h2{
+h2 {
   font-size: 3.7rem;
   text-transform: capitalize;
   color: var(--lead);
 }
 
-h3{
+h3 {
   font-size: 2rem;
   text-transform: capitalize;
   color: var(--lead);
 }
 
-.service-card h3{
+.service-card h3 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
 /* SECTION 02 */
 
+.order-card {
+  flex: 1;
+  flex-basis: 300px;
+  background: var(--pure-white);
+  border: .1rem solid var(--gold-finger);
+  border-radius: 2rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 8px 8px 8px,
+    rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+}
+
+.order-card img {
+  width: 15rem;
+}
 
 /* Footer Styling */
 
@@ -252,7 +265,7 @@ h3{
     max-width: 20rem;
     padding: 2rem;
     background: var(--pure-white);
-    border: 0.1rem solid var(--gold-finger);
+    border: .1rem solid var(--gold-finger);
     border-radius: 2rem;
     box-shadow:
       rgba(0, 0, 0, 0.05) 8px 8px 8px,
@@ -327,7 +340,7 @@ h3{
   }
 
   /* SECTION 01 */
-  h2{
+  h2 {
     font-size: 3rem;
   }
 }
