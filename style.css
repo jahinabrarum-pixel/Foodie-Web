@@ -154,6 +154,7 @@ img {
 .service-card{
   flex: 1;
   flex-basis: 300px;
+  /* cursor: pointer; */
 }
 
 h1 {
@@ -218,6 +219,9 @@ h3{
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
+
+/* SECTION 02 */
+
 
 /* Footer Styling */
 
