@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* ==========================================================================
+   1. GLOBAL RESETS & VARIABLES
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -20,21 +23,31 @@ body {
   background: var(--eye-ball);
 }
 
-/* Basic Styling */
+/* ==========================================================================
+   2. BASIC TYPOGRAPHY & UTILITY CLASSES
+   ========================================================================== */
 a {
   font-size: 1.1rem;
   text-decoration: none;
   color: var(--lead);
 }
 
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+/* Flexbox Utilities */
 .flex {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
-
-li {
-  list-style: none;
 }
 
 .between {
@@ -49,17 +62,11 @@ li {
   gap: 3rem;
 }
 
+/* Spacing & Layout Utilities */
 .wrapper {
   max-width: 1400px;
   margin: auto;
   padding: 1.5rem;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-  display: block;
 }
 
 .p-top {
@@ -74,7 +81,50 @@ img {
   margin-top: 4rem;
 }
 
-/* Header Styling */
+/* Typography Hierarchy */
+h1 {
+  font-size: 5.6vw;
+  color: var(--lead);
+}
+
+h1 span {
+  color: var(--gold-finger);
+}
+
+h2 {
+  font-size: 3.7rem;
+  text-transform: capitalize;
+  color: var(--lead);
+}
+
+h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--lead);
+}
+
+h5 {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: var(--gold-finger);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.25rem;
+  color: gray;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+
+.para {
+  margin-block: 2rem;
+  max-width: 550px;
+}
+
+/* ==========================================================================
+   3. NAVIGATION & HEADER STYLING
+   ========================================================================== */
 .navbar {
   min-height: 14vh;
 }
@@ -85,21 +135,34 @@ img {
   color: var(--gold-finger);
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.9rem 2rem;
+/* Navbar Link Hover Animation */
+.navlist a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navlist a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
   background: var(--gold-finger);
-  border-radius: 1rem;
-  font-size: 1.1rem;
-  color: var(--pure-white);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
-  transition: 0.3s ease-in-out;
+  border-radius: 100px;
+  transform: translateX(-50%);
+  transition: width 0.35s ease;
 }
 
-.btn:hover {
-  background: var(--lead);
+.navlist a:hover {
+  color: var(--gold-finger);
 }
 
+.navlist a:hover::after {
+  width: 100%;
+}
+
+/* Cart Icon & Badge */
 .cart-icon {
   color: var(--lead);
   font-size: 1.3rem;
@@ -120,6 +183,7 @@ img {
   line-height: 20px;
 }
 
+/* Mobile Menu & Hamburger Toggle */
 .desktop-action .hamburger {
   font-size: 1.5rem;
   display: none;
@@ -129,7 +193,6 @@ img {
   display: none;
 }
 
-/* Hamburger Icon Toggle Styling */
 .hamburger .close-icon {
   display: none;
 }
@@ -142,41 +205,46 @@ img {
   display: block;
 }
 
-/* Section Styling */
-
-.hero-section {
-  min-height: calc(100vh - 14vh);
+/* ==========================================================================
+   4. BUTTONS & INTERACTIVE ELEMENTS
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: var(--gold-finger);
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  color: var(--pure-white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
 }
 
-.content,
-.image-container,
-.service-card {
-  flex: 1;
-  flex-basis: 300px;
-  /* cursor: pointer; */
+/* Premium Button Shine & Hover Effect */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
 }
 
-h1 {
-  font-size: 5.6vw;
-  color: var(--lead);
+.btn:hover::before {
+  left: 140%;
 }
 
-h1 span {
-  color: var(--gold-finger);
+.btn:hover {
+  background: var(--lead);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
-p {
-  font-size: 1.25rem;
-  color: gray;
-  line-height: 1.8rem;
-  font-weight: 400;
-}
-
-.para {
-  margin-block: 2rem;
-  max-width: 550px;
-}
-
+/* Social Icons */
 .socail-icon {
   background: var(--hint-yellow);
   width: 3rem;
@@ -192,35 +260,32 @@ p {
 .socail-icon:hover {
   background: var(--lead);
   color: var(--pure-white);
+  transform: translateY(-4px) rotate(5deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* SECTION 01 */
-h5 {
-  font-size: 1.2rem;
-  letter-spacing: 0.2rem;
-  color: var(--gold-finger);
-  text-transform: uppercase;
+/* ==========================================================================
+   5. MAIN CONTENT & SECTIONS
+   ========================================================================== */
+/* Hero Section */
+.hero-section {
+  min-height: calc(100vh - 14vh);
 }
 
-h2 {
-  font-size: 3.7rem;
-  text-transform: capitalize;
-  color: var(--lead);
+.content,
+.image-container,
+.service-card {
+  flex: 1;
+  flex-basis: 300px;
 }
 
-h3 {
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: var(--lead);
-}
-
+/* Section 01 - Service Card */
 .service-card h3 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
-/* SECTION 02 */
-
+/* Section 02 - Order Card */
 .order-card {
   flex: 1;
   flex-basis: 300px;
@@ -236,11 +301,9 @@ h3 {
   width: 15rem;
 }
 
-/* Footer Styling */
-
-/* =============================
-   Mobile Responsive Media Query 
-   ============================= */
+/* ==========================================================================
+   6. RESPONSIVE MEDIA QUERIES (MOBILE FIXES)
+   ========================================================================== */
 @media screen and (max-width: 780px) {
   .navlist,
   .desktop-action .btn {
@@ -251,6 +314,7 @@ h3 {
     display: block;
   }
 
+  /* Mobile Navigation Menu Drawer */
   .mobile-menu {
     display: flex;
     flex-direction: column;
@@ -278,10 +342,7 @@ h3 {
     transform: translateX(-50%) translateY(0);
   }
 
-  /* Hero Section Mobile Fixes */
-
-  /* HERO SECTION */
-
+  /* Hero Section Typography & Layout Adjustment */
   h1 {
     font-size: 3.6rem;
   }
@@ -298,15 +359,12 @@ h3 {
     gap: 4rem;
   }
 
-  /* বাটন উপরে এবং সোশ্যাল গ্রুপ নিচে নেওয়ার জন্য */
   .hero-actions {
     display: flex;
-    /* flex-direction: column; */
     align-items: flex-start;
     gap: 1.5rem;
   }
 
-  /* মোবাইলের জন্য আইকনের সাইজ */
   .socail-icon {
     width: 2.8rem;
     aspect-ratio: 1;
@@ -314,32 +372,31 @@ h3 {
     font-size: 1.1rem;
   }
 
+  /* Social Container Flexbox Alignment */
   .social-container {
     display: flex !important;
-    flex-direction: row !important; /* একদম পাশাপাশি রাখার জন্য */
-    flex-wrap: nowrap !important; /* কোনো কিছু নিচে নামবে না */
-    gap: 0.5rem !important; /* মোবাইলে উপাদানগুলোর মাঝের গ্যাপ কমানো হলো */
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
     width: 100%;
-    overflow-x: auto; /* খুব ছোট স্ক্রিন হলে যেন ভেঙে নিচে না গিয়ে ডানে স্ক্রল করা যায় */
+    overflow-x: auto;
   }
 
-  /* মোবাইলে Order Now বাটনের সাইজ কিছুটা ছোট করা হলো */
   .social-container .btn {
     padding: 0.8rem 1.2rem;
     font-size: 0.95rem;
-    white-space: nowrap; /* লেখা যেন দুই লাইনে না ভেঙে যায় */
+    white-space: nowrap;
   }
 
-  /* মোবাইলে সোশ্যাল আইকনগুলোর সাইজ ছোট করা হলো যেন এক লাইনে ধরে */
   .social-container .socail-icon {
     width: 2.5rem;
     aspect-ratio: 1;
     line-height: 2.5rem;
     font-size: 1rem;
-    flex-shrink: 0; /* আইকনগুলো যেন চ্যাপ্টা না হয়ে যায় */
+    flex-shrink: 0;
   }
 
-  /* SECTION 01 */
+  /* Section 01 Mobile Typography */
   h2 {
     font-size: 2.5rem;
   }
