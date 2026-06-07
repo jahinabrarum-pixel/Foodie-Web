@@ -11,9 +11,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/letter-f.png">
+
     <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/letter-f.png" />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- Header Part -->
@@ -143,52 +149,120 @@
             <h2>The Most Popular</h2>
           </div>
 
-          <div class="card-list t-center">
-
-            <div class="order-card">
+          <div class="card-list t-center flex mt-4 gap-2">
+            <!-- <div class="order-card">
               <div class="crad-image">
                 <img src="assets/burger.png">
               </div>
               <h4>Double Beef Burger</h4>
               <h4 class="price">$9.67</h4>
               <a href="#" class="btn">Add to Cart</a>
-            </div>
-
-            <div class="order-card">
-              <div class="crad-image">
-                <img src="assets/pizza.png">
-              </div>
-              <h4>Veggie Pizza</h4>
-              <h4 class="price">$10.99</h4>
-              <a href="#" class="btn">Add to Cart</a>
-            </div>
-
-            <div class="order-card">
-              <div class="crad-image">
-                <img src="assets/fried-chicken.png">
-              </div>
-              <h4>Fried Chicken</h4>
-              <h4 class="price">$13.45</h4>
-              <a href="#" class="btn">Add to Cart</a>
-            </div>
-
-            <div class="order-card">
-              <div class="crad-image">
-                <img src="assets/chicken-roll.png">
-              </div>
-              <h4>Chicken Roll</h4>
-              <h4 class="price">$7.50</h4>
-              <a href="#" class="btn">Add to Cart</a>
-            </div>
-
+            </div> -->
           </div>
         </div>
+      </section>
+
+      <section>
+        <div class="wrapper p-top flex gap-3">
+          <div class="image-container">
+            <img src="assets/delivery-boy-with-phone.png" />
+          </div>
+
+          <div class="content">
+            <h5>Our reviews</h5>
+            <h2>What they say?</h2>
+            <div class="review-container">
+              <!-- Swiper -->
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper mt-4">
+                  <div class="swiper-slide">
+                    <div class="flex gap-2">
+                      <div class="profile">
+                        <img src="assets/profile1.jpeg" />
+                      </div>
+                      <div>
+                        <h4>Guy Hawkins</h4>
+                        <div class="mt-half">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="para">
+                      Foodie is the best. Besides the many delicious meals, the
+                      service is also very good, especially very fast delivery.
+                      I highly recommend Foodie to you.
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="flex gap-2">
+                      <div class="profile">
+                        <img src="assets/profile2.jpeg" />
+                      </div>
+                      <div>
+                        <h4>Sophia Anderson</h4>
+                        <div class="mt-half">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="para">
+                      Fresh ingredients, creative menu, and warm service make
+                      this spot a hidden gem. Perfect for casual dinners or
+                      special nights out. Truly a foodie’s paradise!
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="flex gap-2">
+                      <div class="profile">
+                        <img src="assets/profile3.jpeg" />
+                      </div>
+                      <div>
+                        <h4>Olivia Smith</h4>
+                        <div class="mt-half">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="para">
+                      Delicious dishes, cozy ambiance, and exceptional service.
+                      A must-visit for food lovers seeking bold flavors and
+                      unforgettable dining experiences. Highly recommended,
+                      every bite delights!
+                    </p>
+                  </div>
+                </div>
+                <div class="flex between">
+                  <a href="#" class="arrow" id="prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </a>
+                  <a href="#" class="arrow" id="next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        
       </section>
     </main>
 
     <!-- Footer Part -->
     <footer></footer>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
 </html>
