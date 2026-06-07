@@ -244,6 +244,10 @@ p {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
+.button-top{
+  margin-top: 10px;
+}
+
 /* Social Icons */
 .socail-icon {
   background: var(--hint-yellow);
@@ -255,6 +259,7 @@ p {
   line-height: 3rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
   transition: 0.3s ease-in-out;
+  margin-top: 10px;
 }
 
 .socail-icon:hover {
