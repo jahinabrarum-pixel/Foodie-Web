@@ -380,14 +380,19 @@ h4 {
   min-width: 350px;
 }
 
-/* .review-container {
-  width: 100%;
-  max-width: 650px;
-} */
+
+/* Section 04 */
+.app-container {
+  background: var(--hint-yellow);
+  padding: 3rem 6rem;
+  border-radius: 3rem;
+}
 
 /* ==========================================================================
    6. Footer
    ========================================================================== */
+
+
 
 /* ==========================================================================
    7. RESPONSIVE MEDIA QUERIES (MOBILE FIXES)
@@ -409,7 +414,6 @@ h4 {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    /* position: absolute; */
     position: fixed;
     top: 14vh;
     left: 50%;
