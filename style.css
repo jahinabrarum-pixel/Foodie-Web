@@ -86,6 +86,10 @@ img {
   margin-top: 0.5rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 /* Typography Hierarchy */
 h1 {
   font-size: 5.6vw;
