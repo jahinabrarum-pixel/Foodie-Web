@@ -9,6 +9,7 @@
   box-sizing: border-box;
   font-family: "Roboto Condensed", sans-serif;
   -webkit-tap-highlight-color: transparent;
+  /* border: .1rem solid red; */
 }
 
 :root {
@@ -381,12 +382,42 @@ h4 {
 }
 
 
-/* Section 04 */
+/* SECTION 04 */
 .app-container {
   background: var(--hint-yellow);
   padding: 3rem 6rem;
   border-radius: 3rem;
+  flex: 1;
 }
+
+.app-container .content h2 {
+  font: 4.5rem;
+}
+
+.app-container .image-container img {
+  width: 25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    6. Footer
@@ -510,4 +541,13 @@ h4 {
   .review-container {
     max-width: 100%;
   }
+
+    /* SECTION 04 */
+    .app-container {
+      padding: 2.2rem;
+    }
+
+    .app-container .content h2 {
+      font-size: 3.5rem;
+    }
 }
